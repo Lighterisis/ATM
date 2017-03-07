@@ -1,6 +1,5 @@
 <html ng-app="app">
   <head>
-    
     <script src="/atm/js/jquery-3.1.1.min.js"></script>
     <script src="/atm/js/angular.min.js"></script>
     <script src="/atm/js/appjs.js"></script>
@@ -53,7 +52,9 @@
       <legend style="font-size:40px;"><b>ATM</b></legend>
         <form>
           Money &nbsp; : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <input id="money" format="number" type="search" name="code" size="40" placeholder="0.00" ng-model="money" ng-keyup="confirm()">
+          <input id="money" format="number" type="search" name="code" size="40" placeholder="0.00" 
+                  ng-model="money">
+          <button id="submit" class="button" ng-click="confirm()"><b>Enter</b></button>
           <div id="err" ng-show="checker == false" style="color:red">Incorrect</div>
           <div id="err" ng-show="checkerbill == false" style="color:red">This machine not enough bill.</div>
           <table style="width:100%">
@@ -74,7 +75,7 @@
               <td>{{z}}</td>
             </tr>     
           </table>
-          <button id="submit" class="button" ng-click="confirm()"><b>Confirm</b></button>
+          
         </form>
     </fieldset>
     <!-- <br>
